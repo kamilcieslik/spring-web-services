@@ -1,11 +1,22 @@
 package com.in28minutes.rest.webservices.restfulwebservices.user;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
+import java.util.Optional;
+
+public class  UserNotFoundException extends RuntimeException {
+	private HttpStatus httpStatus;
+
 	public UserNotFoundException(String message) {
 		super(message);
+	}
+
+	public UserNotFoundException(String s, HttpStatus accepted) {
+		super(s);
+		httpStatus = accepted;
+	}
+
+	public Optional<HttpStatus> getHttpStatus() {
+		return Optional.ofNullable(httpStatus);
 	}
 }

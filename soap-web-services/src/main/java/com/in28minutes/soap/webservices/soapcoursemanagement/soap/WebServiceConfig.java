@@ -22,7 +22,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @EnableWs
 // Spring Configuration
 @Configuration
-public class WebServiceConfig extends WsConfigurerAdapter{
+public class  WebServiceConfig extends WsConfigurerAdapter{
 	// MessageDispatcherServlet
 	// ApplicationContext
 	// url -> /ws/*

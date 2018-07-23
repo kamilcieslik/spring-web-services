@@ -21,7 +21,7 @@ import com.in28minutes.soap.webservices.soapcoursemanagement.soap.service.Course
 import com.in28minutes.soap.webservices.soapcoursemanagement.soap.service.CourseDetailsService.Status;
 
 @Endpoint
-public class CourseDetailsEndpoint {
+public class  CourseDetailsEndpoint {
 
 	@Autowired
 	CourseDetailsService service;
